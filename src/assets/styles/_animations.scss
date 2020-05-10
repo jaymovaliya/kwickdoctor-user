@@ -1,0 +1,40 @@
+:global(.fade-enter) {
+  opacity: 0.01;
+}
+
+:global(.fade-enter.fade-enter-active) {
+  opacity: 1;
+  transition: opacity 1000ms ease-in-out;
+}
+
+:global(.fade-exit) {
+  opacity: 1;
+}
+
+:global(.fade-exit.fade-exit-active) {
+  opacity: 0.01;
+  transition: opacity 800ms ease-in-out;
+}
+
+:global(.slide-enter) {
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+:global(.slide-enter.slide-enter-active) {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all .3s ease-in-out;
+}
+
+:global(.slide-exit) {
+  opacity: 0;
+  display: none;
+  transition: none;
+}
+
+:global(.slide-exit.slide-exit-active) {
+  opacity: 0;
+  display: none;
+  transition: none;
+}
